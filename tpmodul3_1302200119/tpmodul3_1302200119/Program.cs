@@ -10,6 +10,13 @@ namespace tpmodul3_1302200119
     {
         static void Main(string[] args)
         {
+            KodePos kode = new KodePos();
+            int kodePos = kode.getKodePos(KodePos.Kelurahan.Batununggal);
+            Console.WriteLine(kodePos);
+
+            DoorMachine pintu1 = new DoorMachine();
+            Console.WriteLine("Kondisi Pintu Awal : "+pintu1.currentState);
+            pintu1.activeTrigger(DoorMachine.Trigger.BukaPintu);
         }
     }
 }
